@@ -30,13 +30,13 @@ const Login = () => {
     mutationKey: ["signup"],
     onSuccess: (data: any) => {
       console.log("successfully created", data);
-      toast.success("Successfully logedin!", { duration: 3000 });
+      toast.success("Successfully Signed up!", { duration: 3000 });
       reset();
       router.replace("/auth/login");
     },
     onError: (err: any) => {
       console.log("error", err);
-      toast.error(err?.message ?? "login failed", { duration: 3000 });
+      toast.error(err?.message ?? "Sign up failed", { duration: 3000 });
     },
   });
   const onSubmit = (data: ISignup) => mutate(data);
